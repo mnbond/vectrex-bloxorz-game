@@ -7,21 +7,23 @@ A JavaScript implementation of Bloxorz game for a vector display-based home vide
 ## Instructions
 
 1. Add JavaScript code containing class `Vectrex` in an HTML document:
-```html
+  ```html
 <script src="js/vectrex.js" type="text/javascript"></script>
-```
+  ```
 2. Add HTML element for the game in `body` section:
-```html
+  ```html
 <div id="vectrex-container"></div>
-```
+  ```
 3. Сreate an instance of class `Vectrex` after the `DOMContentLoaded` event:
-```js
+  ```js
+let vectrex = null;
+
 document.addEventListener("DOMContentLoaded", () => {
     const cellSizePx = 30;
     const containerId = "vectrex-container";
-    const vectrex = new Vectrex(containerId, cellSizePx);
+    vectrex = new Vectrex(containerId, cellSizePx);
 });
-```
+  ```
 
 Class `Vectrex` constructor parameters:
 - `containerId` — ID of HTML element for the game;
