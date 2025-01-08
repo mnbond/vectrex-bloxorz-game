@@ -230,6 +230,11 @@ class Vectrex {
     repeatLevel() {
         this.loadLevel(this.currentLevelIndex);
     }
+
+    resize() {
+        this.createCanvas();
+        this.render();
+    }
     
     setDefaultProperties() {
         // Set dictionaries
