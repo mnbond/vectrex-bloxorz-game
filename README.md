@@ -1,10 +1,10 @@
 # Vectrex game Bloxorz
 
-A JavaScript implementation of Bloxorz game for a vector display-based home video game console [Vectrex](https://en.wikipedia.org/wiki/Vectrex).
+A JavaScript implementation of Bloxorz game for a vector display-based home video game console [Vectrex](https://en.wikipedia.org/wiki/Vectrex). View demo here.
 
 ![Screenshots](./screenshots/levels.png)
 
-### Instructions
+## Instructions
 
 1. Add JavaScript code containing class `Vectrex` in an HTML document:
 ```html
@@ -27,7 +27,7 @@ Class `Vectrex` constructor parameters:
 - `containerId` — ID of HTML element for the game;
 - `cellSizePx` — size of cell in pixels, default 10 pixels.
 
-### Adding new levels
+## Adding new levels
 
 To add new levels modify this method of class `Vectrex`:
 ```js
@@ -44,7 +44,3 @@ class Vectrex {
                     cellFinishPosition: []
                 }
 ```
-
-### Demo
-
-View demo here.
