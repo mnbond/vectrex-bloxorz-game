@@ -21,18 +21,14 @@ A JavaScript implementation of Bloxorz game for a vector display-based home vide
 3. Сreate an instance of class `Vectrex` after the `DOMContentLoaded` event:
 
     ```js
-    let vectrex = null;
-
     document.addEventListener("DOMContentLoaded", () => {
-        const cellSizePx = 30;
-        const containerId = "vectrex-container";
-        vectrex = new Vectrex(containerId, cellSizePx);
+        vectrex = new Vectrex("vectrex-container", 30);
     });
     ```
 
-Class `Vectrex` constructor parameters:
-- `containerId` — ID of HTML element for the game;
-- `cellSizePx` — size of cell in pixels, default 10 pixels.
+    Class `Vectrex` constructor parameters:
+    - `containerId` — ID of HTML element for the game;
+    - `cellSizePx` — size of cell in pixels, default 10 pixels.
 
 ## Adding new levels
 
