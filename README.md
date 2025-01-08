@@ -7,7 +7,7 @@ A JavaScript implementation of Bloxorz game for a vector display-based home vide
 ### Instructions
 
 1. Add JavaScript class `Vectrex` to HTML document:
-```
+```html
 <script src="js/vectrex.js" type="text/javascript"></script>
 ```
 
