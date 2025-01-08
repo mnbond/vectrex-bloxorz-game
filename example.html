@@ -20,10 +20,16 @@
     </div>
     <div id="vectrex-container"></div>
     <script type="text/javascript">
+        let vectrex = null;
+
         document.addEventListener("DOMContentLoaded", () => {
             const cellSizePx = 30;
             const containerId = "vectrex-container";
-            const vectrex = new Vectrex(containerId, cellSizePx);
+            vectrex = new Vectrex(containerId, cellSizePx);
+        });
+
+        window.addEventListener("resize", () => {
+            if (vectrex != null) vectrex.resize();
         });
     </script>
 </body>
