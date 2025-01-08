@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0
 }
+
 html, body {
     height: 100%
 }
+
 body {
     background-color: #111;
     display: flex;
     flex-direction: column;
 }
+
 .header {
     background: #333;
     color: #fff;
@@ -19,9 +22,11 @@ body {
     padding: 10px 30px;
     text-align: center;
 }
+
 .header .btn-container {
     display: inline-block;
 }
+
 .header .btn-container .btn {
     background: #fff;
     border-radius: 4px;
@@ -32,6 +37,7 @@ body {
     vertical-align: top;
     width: 18px;
 }
+
 #vectrex-container {
     font-size: 0;
     flex: 1 0 auto;
