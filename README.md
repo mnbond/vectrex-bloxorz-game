@@ -24,12 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 ```
 
 Class `Vectrex` constructor parameters:
-- `containerId` — ID of HTLM element for the game;
+- `containerId` — ID of HTML element for the game;
 - `cellSizePx` — size of cell in pixels, default 10 pixels.
-
-### Demo
-
-View demo here.
 
 ### Adding new levels
 
@@ -48,3 +44,7 @@ class Vectrex {
                     cellFinishPosition: []
                 }
 ```
+
+### Demo
+
+View demo here.
