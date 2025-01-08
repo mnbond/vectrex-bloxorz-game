@@ -13,19 +13,22 @@ A JavaScript implementation of Bloxorz game for a vector display-based home vide
     ```
 
 2. Add HTML element for the game in `body` section:
-  ```html
-<div id="vectrex-container"></div>
-  ```
-3. Сreate an instance of class `Vectrex` after the `DOMContentLoaded` event:
-  ```js
-let vectrex = null;
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cellSizePx = 30;
-    const containerId = "vectrex-container";
-    vectrex = new Vectrex(containerId, cellSizePx);
-});
-  ```
+    ```html
+    <div id="vectrex-container"></div>
+    ```
+
+3. Сreate an instance of class `Vectrex` after the `DOMContentLoaded` event:
+
+    ```js
+    let vectrex = null;
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const cellSizePx = 30;
+        const containerId = "vectrex-container";
+        vectrex = new Vectrex(containerId, cellSizePx);
+    });
+    ```
 
 Class `Vectrex` constructor parameters:
 - `containerId` — ID of HTML element for the game;
