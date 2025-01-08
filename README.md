@@ -1,2 +1,3 @@
 # vectrex-bloxorz-game
-About A JavaScript implementation of Vectrex game Bloxorz.
+
+![Screenshots](./screenshots/levels.png)
