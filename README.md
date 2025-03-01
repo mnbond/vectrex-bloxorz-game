@@ -1,6 +1,6 @@
 # Vectrex game Bloxorz
 
-A JavaScript implementation of Bloxorz game for a vector display-based home video game console [Vectrex](https://en.wikipedia.org/wiki/Vectrex). View demo here: [codepen.io](https://codepen.io/mnbond/pen/XJrZNjq).
+A JavaScript implementation of Bloxorz game for a vector display-based home video game console [Vectrex](https://en.wikipedia.org/wiki/Vectrex). View demo here: [codepen.io](https://codepen.io/mnbond/full/XJrZNjq).
 
 ![Screenshots](./screenshots/levels.png)
 
