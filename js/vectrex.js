@@ -189,9 +189,10 @@ class Vectrex {
         const context = canvas.getContext("2d");
         context.clearRect(0, 0, canvas.width, canvas.height);
         
-        // Render cells and shape
+        // Render cells, shape and panel
         this.renderCells();
         this.renderShape();
+        this.renderPanel();
     }
     
     renderCells() {
@@ -216,6 +217,16 @@ class Vectrex {
         // Render finish cell
         const cellFinishCoords = this.calcCellCoords(baseCoords, this.cellFinishPosition);
         this.drawVertexes(this.settings.cellFinishSprite.vertexes, cellFinishCoords, this.settings.colors.cellFinish, lineWidthPx);
+    }
+
+    renderPanel() {
+        const context = this.container.firstChild.getContext("2d");
+        const text = "Level: " + ((this.currentLevelIndex + 1) < 10 ? "0" : "") + (this.currentLevelIndex + 1).toString();
+
+        context.font = this.settings.fontSize + "px monospace";
+        context.textBaseline = "top";
+        context.fillStyle = this.settings.colors.text;
+        context.fillText(text, 20, 20);
     }
     
     renderShape() {
@@ -246,7 +257,15 @@ class Vectrex {
         
         // Set settings
         this.settings = {
-            colors: {cell: "#888", cellStart: "#888", cellFinish: "#888", shapeInProgress: "#fff", shapeWin: "#f90", shapeLoss: "#f00"},
+            colors: {
+                cell: "#888", 
+                cellStart: "#888", 
+                cellFinish: "#888", 
+                shapeInProgress: "#fff", 
+                shapeWin: "#f90", 
+                shapeLoss: "#f00", 
+                text: "#fff"
+            },
             cellSprite: {
                 width: .6, 
                 height: .5, 
@@ -268,6 +287,7 @@ class Vectrex {
                     [[.3, .7], [.6, .0]]
                 ]
             },
+            fontSize: 14,
             shapeSprite: {
                 horizontalVertexes: [
                     [[.0, .2], [.0, -.5], [1.2, -.9], [1.2, -.2], [.0, .2]],
@@ -300,14 +320,14 @@ class Vectrex {
                     cellFinishPosition: [2, 3]
                 },
                 {
-                    cells: [[3, 0], [4, 0], [5, 0], [3, 1], [4, 1], [5, 1], [2, 2], [3, 2], [4, 2], [5, 2], [2, 3], [3, 3], [4, 3], [0, 4], [1, 4], [2, 4], [6, 4], [7, 4], [8, 4], [0, 5], [1, 5], [2, 5], [6, 5], [7, 5], [8, 5], [9, 5], [0, 6], [1, 6], [2, 6], [7, 6], [8, 6], [9, 6], [0, 7], [7, 7], [8, 7], [9, 7], [0, 8], [4, 8], [5, 8], [6, 8], [7, 8], [8, 8], [0, 9], [1, 9], [2, 9], [3, 9], [4, 9], [5, 9], [3, 10], [4, 10], [5, 10], [3, 11], [3, 12], [3, 13], [3, 14]],
-                    cellStartPosition: [3, 14],
-                    cellFinishPosition: [4, 1]
-                },
-                {
                     cells: [[0, 0], [1, 0], [2, 0], [3, 0], [0, 1], [1, 1], [2, 1], [3, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [5, 2], [1, 3], [2, 3], [3, 3], [4, 3], [5, 3], [5, 4], [5, 5], [3, 6], [4, 6], [5, 6], [3, 7], [4, 7], [5, 7], [3, 8], [4, 8], [5, 8], [3, 9], [1, 10], [2, 10], [3, 10], [4, 10], [1, 11], [2, 11], [3, 11], [4, 11], [1, 12], [2, 12], [3, 12], [4, 12], [1, 13], [2, 13], [3, 13], [4, 13]],
                     cellStartPosition: [2, 12],
                     cellFinishPosition: [2, 1]
+                },
+                {
+                    cells: [[3, 0], [4, 0], [5, 0], [3, 1], [4, 1], [5, 1], [2, 2], [3, 2], [4, 2], [5, 2], [2, 3], [3, 3], [4, 3], [0, 4], [1, 4], [2, 4], [6, 4], [7, 4], [8, 4], [0, 5], [1, 5], [2, 5], [6, 5], [7, 5], [8, 5], [9, 5], [0, 6], [1, 6], [2, 6], [7, 6], [8, 6], [9, 6], [0, 7], [7, 7], [8, 7], [9, 7], [0, 8], [4, 8], [5, 8], [6, 8], [7, 8], [8, 8], [0, 9], [1, 9], [2, 9], [3, 9], [4, 9], [5, 9], [3, 10], [4, 10], [5, 10], [3, 11], [3, 12], [3, 13], [3, 14]],
+                    cellStartPosition: [3, 14],
+                    cellFinishPosition: [4, 1]
                 }
             ]
         };
